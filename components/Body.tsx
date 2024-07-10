@@ -243,7 +243,7 @@ const Body = ({
                   <div className="flex justify-center gap-5 mt-4">
                     <Button
                       onClick={() =>
-                        downloadQrCode(response.image_url, 'qrCode')
+                        downloadQrCode(response.image_url, 'Código Qr')
                       }
                     >
                       Descargar

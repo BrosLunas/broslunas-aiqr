@@ -5,20 +5,13 @@ const Footer = () => (
     <div className="custom-screen pt-16">
       <div className="mt-10 py-10 border-t items-center justify-between flex">
         <p className="text-gray-600">
-          Created by{' '}
+          Creado pòr{' '}
           <a
-            href="https://twitter.com/nutlope"
+            href="https://twitter.com/Broslunas"
             className="hover:underline transition"
           >
             Hassan
           </a>{' '}
-          and{' '}
-          <a
-            href="https://twitter.com/kevinhou22"
-            className="hover:underline transition"
-          >
-            Kevin
-          </a>
           .
         </p>
         <div className="flex items-center gap-x-6 text-gray-400">
@@ -27,7 +20,7 @@ const Footer = () => (
             href="https://v0.dev/"
             target="_blank"
           >
-            <span className="text-gray-500">Built with</span>
+            <span className="text-gray-500">Hecho con</span>
             <V0Logo width={25} />
           </a>
         </div>

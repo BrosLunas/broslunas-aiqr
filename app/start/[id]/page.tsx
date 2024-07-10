@@ -26,8 +26,8 @@ export async function generateMetadata({
     return;
   }
 
-  const title = `QrGPT: ${data.prompt}`;
-  const description = `A QR code generated from qrGPT.io linking to: ${data.website_url}`;
+  const title = `BroslunasQr: ${data.prompt}`;
+  const description = `Un código QR generado a partir de broslunas-aiqr.vercel.app que enlaza con: ${data.website_url}`;
   const image = data.image || 'https://broslunas-aiqr.vercel.app/og-image.png';
 
   return {
