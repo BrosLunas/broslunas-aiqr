@@ -28,10 +28,10 @@ import { useRouter } from 'next/navigation';
 import { toast, Toaster } from 'react-hot-toast';
 
 const promptSuggestions = [
-  'A city view with clouds',
-  'A beautiful glacier',
-  'A forest overlooking a mountain',
-  'A saharan desert',
+  'Una vista de la ciudad con nubes',
+  'Un hermoso glaciar',
+  'Un bosque con vistas a una montaña',
+  'Un desierto sahariano',
 ];
 
 const generateFormSchema = z.object({
@@ -113,19 +113,19 @@ const Body = ({
         if (!response.ok || response.status !== 200) {
           const text = await response.text();
           throw new Error(
-            `Failed to generate QR code: ${response.status}, ${text}`,
+            `Error al generar el Qr: ${response.status}, ${text}`,
           );
         }
 
         const data = await response.json();
 
-        va.track('Generated QR Code', {
+        va.track('Código Qr Generado', {
           prompt: values.prompt,
         });
 
         router.push(`/start/${data.id}`);
       } catch (error) {
-        va.track('Failed to generate', {
+        va.track('Error al generar', {
           prompt: values.prompt,
         });
         if (error instanceof Error) {
@@ -142,7 +142,7 @@ const Body = ({
     <div className="flex justify-center items-center flex-col w-full lg:p-0 p-4 sm:mb-28 mb-0">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 mt-10">
         <div className="col-span-1">
-          <h1 className="text-3xl font-bold mb-10">Generate a QR Code</h1>
+          <h1 className="text-3xl font-bold mb-10">Genera tu Código Qr</h1>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(handleSubmit)}>
               <div className="flex flex-col gap-4">
@@ -151,12 +151,12 @@ const Body = ({
                   name="url"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>URL</FormLabel>
+                      <FormLabel>Enlace</FormLabel>
                       <FormControl>
-                        <Input placeholder="roomgpt.io" {...field} />
+                        <Input placeholder="Introduce el enlace" {...field} />
                       </FormControl>
                       <FormDescription>
-                        This is what your QR code will link to.
+                        Este sera el que aparezca en el Qr.
                       </FormDescription>
                       <FormMessage />
                     </FormItem>
@@ -167,16 +167,16 @@ const Body = ({
                   name="prompt"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Prompt</FormLabel>
+                      <FormLabel>Descripción</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="A city view with clouds"
+                          placeholder="Introduce una descripción que aparecerá en el fondo"
                           className="resize-none"
                           {...field}
                         />
                       </FormControl>
                       <FormDescription className="">
-                        This is what the image in your QR code will look like.
+                        Esta aparecerá en el fondo de la imagen.
                       </FormDescription>
 
                       <FormMessage />
@@ -184,7 +184,7 @@ const Body = ({
                   )}
                 />
                 <div className="my-2">
-                  <p className="text-sm font-medium mb-3">Prompt suggestions</p>
+                  <p className="text-sm font-medium mb-3">Sugerencias</p>
                   <div className="grid sm:grid-cols-2 grid-cols-1 gap-3 text-center text-gray-500 text-sm">
                     {promptSuggestions.map((suggestion) => (
                       <PromptSuggestion
@@ -205,9 +205,9 @@ const Body = ({
                   {isLoading ? (
                     <LoadingDots color="white" />
                   ) : response ? (
-                    '✨ Regenerate'
+                    '✨ Regenerar'
                   ) : (
-                    'Generate'
+                    'Generar'
                   )}
                 </Button>
 
@@ -226,7 +226,7 @@ const Body = ({
           {submittedURL && (
             <>
               <h1 className="text-3xl font-bold sm:mb-5 mb-5 mt-5 sm:mt-0 sm:text-center text-left">
-                Your QR Code
+                Tu Código Qr
               </h1>
               <div>
                 <div className="flex flex-col justify-center relative h-auto items-center">
@@ -246,18 +246,18 @@ const Body = ({
                         downloadQrCode(response.image_url, 'qrCode')
                       }
                     >
-                      Download
+                      Descargar
                     </Button>
                     <Button
                       variant="outline"
                       onClick={() => {
                         navigator.clipboard.writeText(
-                          `https://qrgpt.io/start/${id || ''}`,
+                          `https://broslunas-aiqr.vercel.app/start/${id || ''}`,
                         );
-                        toast.success('Link copied to clipboard');
+                        toast.success('Copiado al Portapapeles');
                       }}
                     >
-                      ✂️ Share
+                      ✂️ Compartir
                     </Button>
                   </div>
                 )}

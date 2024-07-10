@@ -8,18 +8,18 @@ import PlausibleProvider from 'next-plausible';
 
 const inter = Inter({ subsets: ['latin'] });
 
-let title = 'QrGPT - QR Code Generator';
-let description = 'Generate your AI QR Code in seconds';
-let url = 'https://www.qrgpt.io';
-let ogimage = 'https://www.qrgpt.io/og-image.png';
-let sitename = 'qrGPT.io';
+let title = 'Broslunas Qr';
+let description = 'Genera tus Qr con IA en segundos';
+let url = 'https://broslunas-aiqr.vercel.app';
+let ogimage = 'https://broslunas-aiqr.vercel.app/og-image.png';
+let sitename = 'broslunas-aiqr.vercel.app';
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
   title,
   description,
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon.svg',
   },
   openGraph: {
     images: [ogimage],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description,
     url: url,
     siteName: sitename,
-    locale: 'en_US',
+    locale: 'es_ES',
     type: 'website',
   },
   twitter: {
@@ -44,9 +44,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
-        <PlausibleProvider domain="qrgpt.io" />
+        <PlausibleProvider domain="broslunas-aiqr.vercel.app" />
       </head>
       <body className={inter.className}>
         <Navbar />

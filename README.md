@@ -1,10 +1,9 @@
-<a href="https://qrGPT.io">
-  <img alt="QrGPT – Generate beautiful AI QR Codes in seconds." src="/public/og-image.png">
-  <h1 align="center">qrGPT</h1>
+<a href="https://broslunas-aiqr.vercel.app">
+  <h1 align="center">Broslunas Qr</h1>
 </a>
 
 <p align="center">
-  Generate beautiful AI QR Codes in seconds. Powered by Vercel and Replicate.
+  Genere hermosos códigos QR AI en segundos. Desarrollado por Vercel y Replicate.
 </p>
 
 <p align="center">

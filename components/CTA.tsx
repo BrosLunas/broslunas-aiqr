@@ -6,7 +6,7 @@ const CTA = () => (
           className="text-gray-800 text-3xl font-semibold sm:text-4xl"
           id="oss"
         >
-          QrGPT is Proudly Open Source
+          Broslunas Qr es Open Source
         </h2>
         <p className="mt-3 text-gray-600">
           Our source code is available on GitHub.
