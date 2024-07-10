@@ -232,8 +232,8 @@ const Body = ({
                 <div className="flex flex-col justify-center relative h-auto items-center">
                   {response ? (
                     <QrCard
-                      imageURL={response.image_url}
-                      time={(response.model_latency_ms / 1000).toFixed(2)}
+                    imageURL={response.image_url}
+                    time={(response.model_latency_ms / 1000).toFixed(2)}
                     />
                   ) : (
                     <div className="relative flex flex-col justify-center items-center gap-y-2 w-[510px] border border-gray-300 rounded shadow group p-2 mx-auto animate-pulse bg-gray-400 aspect-square max-w-full" />
