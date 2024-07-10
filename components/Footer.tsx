@@ -10,7 +10,7 @@ const Footer = () => (
             href="https://twitter.com/Broslunas"
             className="hover:underline transition"
           >
-            Hassan
+            Broslunas
           </a>{' '}
           .
         </p>

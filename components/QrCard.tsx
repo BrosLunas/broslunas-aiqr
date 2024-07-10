@@ -19,7 +19,7 @@ export const QrCard: React.FC<QrCardProps> = ({ imageURL, time }) => {
       <Image
         src={imageURL}
         className="rounded "
-        alt="qr code"
+        alt="Código Qr"
         width={480}
         height={480}
       />
