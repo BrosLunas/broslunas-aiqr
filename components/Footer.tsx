@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="custom-screen pt-16">
       <div className="mt-10 py-10 border-t items-center justify-between flex">
         <p className="text-gray-600">
-          Creado pòr{' '}
+          Creado por{' '}
           <a
             href="https://twitter.com/Broslunas"
             className="hover:underline transition"
