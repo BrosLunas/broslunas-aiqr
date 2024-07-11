@@ -19,7 +19,7 @@ export default function Hero() {
           </p>
           <div className="flex items-center justify-center gap-x-3 font-medium text-sm">
             <NavLink
-              href="/start"
+              href="/qr"
               className="text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900 "
             >
               Genera tu Qr
