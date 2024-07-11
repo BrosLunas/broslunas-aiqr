@@ -123,7 +123,7 @@ const Body = ({
           prompt: values.prompt,
         });
 
-        router.push(`/start/${data.id}`);
+        router.push(`/qr/${data.id}`);
       } catch (error) {
         va.track('Error al generar', {
           prompt: values.prompt,
@@ -252,7 +252,7 @@ const Body = ({
                       variant="outline"
                       onClick={() => {
                         navigator.clipboard.writeText(
-                          `https://broslunas-aiqr.vercel.app/start/${id || ''}`,
+                          `https://broslunas-aiqr.vercel.app/qr/${id || ''}`,
                         );
                         toast.success('Copiado al Portapapeles');
                       }}
