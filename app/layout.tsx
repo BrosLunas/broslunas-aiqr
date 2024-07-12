@@ -47,6 +47,7 @@ export default function RootLayout({
     <html lang="es">
       <head>
         <PlausibleProvider domain="broslunas-aiqr.vercel.app" />
+        <meta name="google-site-verification" content="F8T3k8s_HD_6-hPvCDj0ICK6mMhBetfIPgca2x33_JE" />
       </head>
       <body className={inter.className}>
         <Navbar />
