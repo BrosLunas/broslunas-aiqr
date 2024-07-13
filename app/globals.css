@@ -8,13 +8,14 @@
 
 .gradient-border {
   border: 1px solid transparent;
-  background: linear-gradient(black, black),
+  background: linear-gradient(white, white),
     linear-gradient(
-      rgba(0, 0, 0, 0.63),
-      rgba(0, 0, 0, 0.63),
+      25deg,
+      rgba(209, 213, 219, 1),
       rgba(209, 213, 219, 1),
       rgba(0, 0, 0, 0.63),
-      rgba(0, 0, 0, 0.63)
+      rgba(209, 213, 219, 1),
+      rgba(209, 213, 219, 1)
     );
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
