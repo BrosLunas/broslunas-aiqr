@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 let title = 'Broslunas Qr';
 let description = 'Genera tus Qr con IA en segundos';
-let url = 'https://broslunas-aiqr.vercel.app';
-let ogimage = 'https://broslunas-aiqr.vercel.app/og-image.png';
+let url = 'https://aiqr.broslunas.com/';
+let ogimage = 'https://aiqr.broslunas.com//og-image.png';
 let sitename = 'broslunas-aiqr.vercel.app';
 
 export const metadata: Metadata = {

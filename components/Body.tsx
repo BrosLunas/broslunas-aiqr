@@ -252,7 +252,7 @@ const Body = ({
                       variant="outline"
                       onClick={() => {
                         navigator.clipboard.writeText(
-                          `https://broslunas-aiqr.vercel.app/start/${id || ''}`,
+                          `https://aiqr.broslunas.com//start/${id || ''}`,
                         );
                         toast.success('Copiado al Portapapeles');
                       }}

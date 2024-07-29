@@ -1,4 +1,4 @@
-<a href="https://broslunas-aiqr.vercel.app">
+<a href="https://aiqr.broslunas.com/">
   <h1 align="center">Broslunas Qr</h1>
 </a>
 
