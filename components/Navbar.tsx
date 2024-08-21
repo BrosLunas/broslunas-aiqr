@@ -11,6 +11,7 @@ const Navbar = () => {
 
   const navigation = [
     // { title: 'Testimonials', path: '#testimonials' },
+    { title: 'Página Principal', path: 'https://broslunas.com' },
     { title: 'Inicio', path: '/' },
   ];
 
